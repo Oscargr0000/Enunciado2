@@ -25,22 +25,15 @@ public class Exercise4 : MonoBehaviour
         resumeCanvas.SetActive(false);
     }
 
-    private void Update()
-    {
-        //BORRAR
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            SelectCorrect();
-        }
-    }
 
-
+    // Select a random number (1 or 2) to select the rigth answer;
     private void SelectCorrect()
     {
         randomNum = Random.Range(1, 3);
     }
 
 
+    //When the button is pressed, validates if the answer is rigth, and create another random answer for the next round
     public void Selection(int value)
     {
         if (roundCounter < 10)
@@ -48,12 +41,10 @@ public class Exercise4 : MonoBehaviour
             if (randomNum == value)
             {
                 correctCounter++;
-                Debug.Log("Correcto" + correctCounter);
             }
             else
             {
                 mistakeCounter++;
-                Debug.Log("Incorrecto" + mistakeCounter);
             }
 
             SelectCorrect();
@@ -67,6 +58,7 @@ public class Exercise4 : MonoBehaviour
         roundText.text = roundCounter.ToString();
     }
 
+    //When the rounds are completed, ativate the finish board and show the results;
     private void InstantiateResult()
     {
         resumeCanvas.SetActive(true);

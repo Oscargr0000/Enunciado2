@@ -8,6 +8,8 @@ public class Exercise3 : MonoBehaviour
     private int currentPositionX;
     private int currentPositionY;
 
+    //The limits are set in 2 counters for every vector
+    //When it get the to the limit desactivate the movement for that vector
 
     private void Update()
     {

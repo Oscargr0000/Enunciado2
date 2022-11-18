@@ -12,6 +12,9 @@ public class Exercise5 : MonoBehaviour
     public Sprite[] horoscopo;
     public string[] nombres;
 
+
+    //When the input is set, is divided and the result is set, calling the image and the name of the horoscop
+
     public void CalculateYear()
     {
         int numInput = int.Parse(yearInput.text);

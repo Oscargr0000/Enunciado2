@@ -12,15 +12,11 @@ public class Exercise2 : MonoBehaviour
     public Image backgroundCrono;
     public TextMeshProUGUI cronoText;
 
-    // Start is called before the first frame update
     void Start()
     {
-
-        currentTime = maxTime;
-        
+        currentTime = maxTime; // The max time is set in the inspector
     }
 
-    // Update is called once per frame
     void Update()
     {
         cronometro();

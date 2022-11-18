@@ -16,16 +16,16 @@ public class Exercise1 : MonoBehaviour
 
     private void Update()
     {
-        EnemyLeft = FindObjectsOfType<Exercise1Destroy>().Length;
+        EnemyLeft = FindObjectsOfType<Exercise1Destroy>().Length; //Get the number of Spheres lefts in the scene
 
-        if (EnemyLeft <= 0)
+        if (EnemyLeft <= 0)  //When the Shpheres are all out spawn next round of sphere +1
         {
             EnemyLimit++;
             MultiplicateEnemy(EnemyLimit);
         }
     }
 
-    private void MultiplicateEnemy(int cantidad)
+    private void MultiplicateEnemy(int cantidad) //Instantiate the spheres
     {
 
         for (int i = 1; i < cantidad; i++)
